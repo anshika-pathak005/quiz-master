@@ -4,9 +4,11 @@ A responsive, browser-based quiz application built with HTML, CSS, and JavaScrip
 
 It fetches questions dynamically from the Open Trivia Database (OTDB), shuffles them locally, and gives users a smooth, interactive quiz experience with score calculation, difficulty selection, and progress tracking.
 
+## 🌐 Online & Offline Mode Support  
+- Online: When the user is connected to the internet, quiz questions are fetched dynamically from an external database. 
+- Offline: If no internet connection is available, questions are loaded locally from the questions.js file to ensure uninterrupted gameplay.
+- 
 ## ✨ Features
-
-### 🎮 Core Gameplay
 
 - ⚡ Dynamic Questions: Fetches quiz questions using fetchOTDB(amount, category, difficulty)  
 - 🖥 Category Pre-Set: Uses Computers (18) category by default  
@@ -17,29 +19,6 @@ It fetches questions dynamically from the Open Trivia Database (OTDB), shuffles 
 - 🧮 Score Calculation: Increments automatically on correct answers  
 - ⏭ Auto Next Button: Appears only after selecting an option  
 
-### 🖥 User Interface
-
-- 📜 Landing Page Popup: Displays rules before starting quiz  
-- 📱 Responsive Layout: Scales smoothly for desktop and mobile  
-- ✒ External Fonts: Google Fonts via @import  
-- 🏷 Header with Logo & Nav: Includes space for branding / menu  
-- 🎯 Circular Progress Result Screen: Shows animated percentage after quiz  
-- 📊 Dynamic Score Display: Updates header score as you play  
-
-### 🛠 Navigation & State Control
-
-- ▶ Start Quiz → Activates quiz box and fetches new questions  
-- 🔄 Try Again → Restarts quiz instantly without reloading page  
-- 🏠 Go Home → Returns to landing screen and resets progress  
-- ❌ Quit Button → Immediately exits quiz and clears state  
-
-### 🎨 Styling
-
-- 🌈 Custom Theme: Magenta (#c40094) accent with black background  
-- ✨ Hover Effects: Buttons and options have interactive highlights  
-- 🎛 Difficulty Dropdown: Styled `<select>` for modern look  
-- 📦 No Extra Libraries: Pure HTML + CSS + JS only  
-
 ## 📂 Project Structure
 
 ```
@@ -48,7 +27,8 @@ quiz-website/
 ├── index.html    # Page structure
 ├── style.css     # Visual styles, responsive layout
 ├── index.js      # Core quiz logic and UI handling
-└── assets/       # (images/icons if used)
+├── questions.js      # quetions for offline
+└── Bg.jpg       # background 
 
 ```
 
@@ -71,17 +51,19 @@ quiz-website/
 - optionSelected(answer) → Marks correct/incorrect answers and updates score.  
 - showResultBox() → Builds animated results screen dynamically.  
 
-## 🧩 Possible Improvements
-
-- ➕ Add menu toggle logic to make the header nav functional  
-- 🔁 Implement restart button inside result screen (no refresh required)  
-- 💾 Use localStorage to save scores between sessions  
-- 🗂 Add category selector dynamically at start screen  
-- ⏱ Include timer per question for more challenge  
-- 🔊 Add sound effects for right/wrong answers  
-
 ## 📸 Screenshot
 
+### 🏠 Landing Page  
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/c449744c-4916-4063-914a-eb4238e0d4ae" />
+
+### 📜 Rules & Level Selection  
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/767436eb-6862-4433-b2aa-64a4e67a1be5" />
+
+### 📝 Quiz in Progress  
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/97806908-6575-4b74-a5f4-d6c8e9c65d71" />
+
+### 🏆 Results Screen  
+<img width="800" height="400" alt="image" src="https://github.com/user-attachments/assets/923a02e8-9643-4c02-9191-a34db1bf3706" />
 
 ## 🙌 Acknowledgments
 
